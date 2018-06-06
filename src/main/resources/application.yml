@@ -1,0 +1,27 @@
+
+server:
+  port: 8000
+spring:
+  application: tktest
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    properties:
+      max-active: 3
+      min-idle: 1
+      initial-size: 1
+      test-on-borrow: true
+      test-on-return: true
+      test-while-idle: true
+      validation-query: select 1
+      #每10分钟收集空闲连接，单位毫秒#
+      time-between-eviction-runs-millis: 600000
+      #连接的最大空闲时间，单位毫秒，60分钟
+      min-evictable-idle-time-millis: 3600000
+      max-wait: 30000
+      jdbc-interceptors: ConnectionState;SlowQueryReport(threshold=0)
+    driver-class-name: com.mysql.jdbc.Driver

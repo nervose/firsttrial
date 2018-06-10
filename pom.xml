@@ -29,6 +29,8 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
+
+		<!--包含hibernate-validator包-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -94,6 +96,8 @@
 			<groupId>com.oneapm.touch.retrofit</groupId>
 			<artifactId>retrofit-spring-boot-starter</artifactId>
 		</dependency>
+
+
 
 		<dependency>
 			<groupId>commons-codec</groupId>
